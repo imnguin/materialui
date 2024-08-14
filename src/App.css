@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,19 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  background-color: rgb(240, 242, 245);
+  min-height: 100vh;
+}
+
+.Sider {
+  height: 97%;
+  /* background-color: rgb(66, 66, 74); */
+  position: fixed;
+  width: 250px;
+  margin: 15px;
+  border-radius: 11px;
+  background: linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25));
 }
