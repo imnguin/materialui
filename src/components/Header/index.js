@@ -14,7 +14,7 @@ const Header = (props) => {
                 alignItems: 'center'
             }}
         >
-            <Row style={{ width: '100%' }}>
+            <Row style={{ width: '100%', display : 'flex', gap : 10 }}>
                 <Col flex={2}
                     style={{ display: "flex", alignItems: 'center' }}
                 >
@@ -67,8 +67,8 @@ const Header = (props) => {
                                     <i className="fa-solid fa-gear Icon"></i>
                                 </button>
                             </Tooltip>
-                            <Tooltip title='Account'>
-                                <button className="IconButton">
+                            <Tooltip title='Collapsed'>
+                                <button className="IconButton" onClick={() => props?.Collapsed()}>
                                     <i className="fa-solid fa-bars Icon"></i>
                                 </button>
                             </Tooltip>

@@ -5,18 +5,23 @@ import Header from '../Header';
 import Content from '../Content';
 
 const Layout = () => {
+    const [collapsed, setCollapsed] = useState(false);
+    const onCollapsed = () => {
+        setCollapsed(!collapsed);
+    };
+
     return (
         <LayoutAntd style={{
             minHeight: '100vh',
             backgroundColor: '#f0f2f5'
         }}>
             <Sider
-                collapsed={true}
+                collapsed={collapsed}
                 // width={250}
                 style={{
                     borderRadius: 11,
                     margin: 15,
-                    background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))'
+                    // background: 'linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))'
                 }}
             />
             <LayoutAntd>
@@ -25,6 +30,7 @@ const Layout = () => {
                         margin: 15,
                         borderRadius: 11
                     }}
+                    Collapsed={onCollapsed}
                 />
                 <Content
                     style={{
