@@ -1,0 +1,9 @@
+.layout {
+    min-height: 100vh;
+    background-color: rgb(240, 242, 245);
+}
+
+.sider {
+    margin: 15px;
+    border-radius: 11px;
+}

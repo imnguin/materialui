@@ -1,5 +1,7 @@
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
 .App {
-  background-color: rgb(240, 242, 245);
+  background-color: #f0f2f5;
   min-height: 100vh;
 }
 
@@ -19,4 +21,79 @@
   justify-content: center;
   font-weight: bold;
   color: white;
+}
+
+.Content {
+  margin-left: 280px;
+  height: 97%;
+  padding: 15px;
+  position: relative;
+}
+
+.Search {
+  width: 83%;
+  background-color: rgb(240, 242, 245);
+  height: 70px;
+  position: fixed;
+  border-radius: 11px;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.SearchLeft {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  padding-left: 15px;
+}
+
+.SearchRight {
+  flex-direction: row;
+  display: flex;
+  gap: 20px;
+  padding-right: 25px;
+  align-items: center;
+}
+
+.SearchInput {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(206, 207, 209);
+  background-color: rgb(240, 242, 245);
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.SearchInput:focus {
+  border: 2px solid rgb(5, 88, 255);
+}
+
+.SearchInput::placeholder {
+  color: rgb(142, 150, 165);
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.IconButton {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(240, 242, 245);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.IconButton:focus {
+  outline: none;
+}
+
+.Icon {
+  color: rgb(137 139 139);
 }
