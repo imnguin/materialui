@@ -1,12 +1,7 @@
 import React from 'react';
-import { Button, Layout, Menu, theme } from 'antd';
-import {
-    MenuFoldOutlined,
-    MenuUnfoldOutlined,
-    UploadOutlined,
-    UserOutlined,
-    VideoCameraOutlined,
-} from '@ant-design/icons';
+import { Layout, Menu, theme } from 'antd';
+import { AppMenu } from '../Menu';
+
 const Sider = (props) => {
     return (
         <Layout.Sider
@@ -19,6 +14,16 @@ const Sider = (props) => {
             collapsed={props?.collapsed}
             collapsedWidth={!!props?.collapsed ? 60 : undefined}
         >
+            <div style={{
+                color: 'white',
+                display: !!props?.collapsed ? 'none' : 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                height: 60,
+                fontWeight: 'bold'
+            }}>
+                Nguin company
+            </div>
             <Menu
                 style={{
                     borderRadius: 11
@@ -26,23 +31,7 @@ const Sider = (props) => {
                 theme="dark"
                 mode="inline"
                 defaultSelectedKeys={['1']}
-                items={[
-                    {
-                        key: '1',
-                        icon: <UserOutlined />,
-                        label: 'nav 1',
-                    },
-                    {
-                        key: '2',
-                        icon: <VideoCameraOutlined />,
-                        label: 'nav 2',
-                    },
-                    {
-                        key: '3',
-                        icon: <UploadOutlined />,
-                        label: 'nav 3',
-                    },
-                ]}
+                items={[...AppMenu]}
             />
         </Layout.Sider>
     );

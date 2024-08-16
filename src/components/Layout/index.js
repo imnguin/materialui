@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { Layout as LayoutAntd } from 'antd';
+import { Grid, Layout as LayoutAntd } from 'antd';
 import Sider from '../Sider';
 import Header from '../Header';
 import Content from '../Content';
+const {useBreakpoint} = Grid;
 
 const Layout = () => {
+    const screens = useBreakpoint()
+    const isMobile = screens.xs;
+
     const [collapsed, setCollapsed] = useState(false);
     const onCollapsed = () => {
         setCollapsed(!collapsed);
@@ -16,7 +20,7 @@ const Layout = () => {
             backgroundColor: '#f0f2f5'
         }}>
             <Sider
-                collapsed={collapsed}
+                collapsed={isMobile || collapsed}
                 // width={250}
                 style={{
                     borderRadius: 11,
